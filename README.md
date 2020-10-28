@@ -1,8 +1,6 @@
 # nz.co.fuzion.multipleeventreg
 
-![Screenshot](/images/screenshot.png)
-
-(*FIXME: In one or two paragraphs, describe what the extension does and why one would download it. *)
+Registers participant to multiple events based on the event ids entered by the user on the custom field.
 
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
@@ -37,7 +35,9 @@ cv en multipleeventreg
 
 ## Usage
 
-(* FIXME: Where would a new user navigate to get started? What changes would they see? *)
+- On installation, the extension creates a new custom field on the "Event" entity.
+- Enter comma-separated event ids on the custom text field. So eg if you're creating an event E1 and want participants to also register to E2 and E3, enter ids for E2, E3 on the text field.
+- Register a partcipant on E1. The participant should also register to E2 and E3.
 
 ## Known Issues
 
