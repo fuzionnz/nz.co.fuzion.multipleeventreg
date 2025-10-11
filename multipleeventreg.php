@@ -18,7 +18,6 @@ function multipleeventreg_civicrm_config(&$config) {
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_xmlMenu
  */
 function multipleeventreg_civicrm_xmlMenu(&$files) {
-  _multipleeventreg_civix_civicrm_xmlMenu($files);
 }
 
 /**
@@ -51,7 +50,6 @@ function multipleeventreg_civicrm_install() {
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_postInstall
  */
 function multipleeventreg_civicrm_postInstall() {
-  _multipleeventreg_civix_civicrm_postInstall();
 }
 
 /**
@@ -76,7 +74,6 @@ function multipleeventreg_civicrm_uninstall() {
       'id' => $groupID,
     ]);
   }
-  _multipleeventreg_civix_civicrm_uninstall();
 }
 
 /**
@@ -94,7 +91,6 @@ function multipleeventreg_civicrm_enable() {
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_disable
  */
 function multipleeventreg_civicrm_disable() {
-  _multipleeventreg_civix_civicrm_disable();
 }
 
 /**
@@ -103,7 +99,7 @@ function multipleeventreg_civicrm_disable() {
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_upgrade
  */
 function multipleeventreg_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
-  return _multipleeventreg_civix_civicrm_upgrade($op, $queue);
+  return;
 }
 
 /**
@@ -115,7 +111,6 @@ function multipleeventreg_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_managed
  */
 function multipleeventreg_civicrm_managed(&$entities) {
-  _multipleeventreg_civix_civicrm_managed($entities);
 }
 
 /**
@@ -128,7 +123,6 @@ function multipleeventreg_civicrm_managed(&$entities) {
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_caseTypes
  */
 function multipleeventreg_civicrm_caseTypes(&$caseTypes) {
-  _multipleeventreg_civix_civicrm_caseTypes($caseTypes);
 }
 
 /**
@@ -142,7 +136,6 @@ function multipleeventreg_civicrm_caseTypes(&$caseTypes) {
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_angularModules
  */
 function multipleeventreg_civicrm_angularModules(&$angularModules) {
-  _multipleeventreg_civix_civicrm_angularModules($angularModules);
 }
 
 /**
@@ -151,7 +144,6 @@ function multipleeventreg_civicrm_angularModules(&$angularModules) {
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_alterSettingsFolders
  */
 function multipleeventreg_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
-  _multipleeventreg_civix_civicrm_alterSettingsFolders($metaDataFolders);
 }
 
 /**
@@ -162,14 +154,12 @@ function multipleeventreg_civicrm_alterSettingsFolders(&$metaDataFolders = NULL)
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_entityTypes
  */
 function multipleeventreg_civicrm_entityTypes(&$entityTypes) {
-  _multipleeventreg_civix_civicrm_entityTypes($entityTypes);
 }
 
 /**
  * Implements hook_civicrm_thems().
  */
 function multipleeventreg_civicrm_themes(&$themes) {
-  _multipleeventreg_civix_civicrm_themes($themes);
 }
 
 function multipleeventreg_civicrm_pre($op, $objectName, $objectId, &$params) {
@@ -183,7 +173,6 @@ function multipleeventreg_civicrm_post($op, $objectName, $objectId, &$objectRef)
     CRM_Multipleeventreg_Registration::createRelatedEventRegistration($objectId, $op);
   }
 }
-
 
 // --- Functions below this ship commented out. Uncomment as required. ---
 
